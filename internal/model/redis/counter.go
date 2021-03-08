@@ -18,7 +18,7 @@ type counterRepo struct {
 }
 
 func (c *counterRepo) Key(name string) string {
-	return "bidding/counter:" + name
+	return "manger/counter:" + name
 }
 
 func (c *counterRepo) Count(counter *model.Counter) (int64, error) {
