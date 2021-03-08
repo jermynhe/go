@@ -1,0 +1,36 @@
+types: dev
+
+dev:
+  http:
+    addr: 0.0.0.0:10016
+  db:
+    postgres:
+      host: 172.31.152.7
+      port: 5432
+      db: test
+      user: test
+      password: 123456
+      sslMode: disable
+      maxIdle: 20
+      maxOpen: 20
+    redis:
+      addr: 172.31.152.7:6379
+      password:
+      db: 1
+test:
+  http:
+    addr: :10016
+  db:
+    postgres:
+      host: 192.168.160.251
+      port: 5432
+      db: emaas
+      user: emaas
+      password: ZHU88jie
+      sslMode: disable
+      maxIdle: 20
+      maxOpen: 20
+    redis:
+      addr: 192.168.160.252:6379
+      password: ZHU88jie
+      db: 1
