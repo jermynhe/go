@@ -29,7 +29,7 @@ func (t *studentRepo) Create(db *db.DB, Student *model.Student) error {
 func (t *studentRepo) List(db *db.DB, ID string, Student string, page, limit int) ([]*model.Student, int64, error) {
 	ql := db.Table(t.TableName())
 
-	ql = ql.Where("id = ?------", ID)
+	ql = ql.Where("id = ?", ID)
 	if Student != "" {
 		Student = strings.Trim(Student, "%")
 		// 后模糊
